@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+#logoutBtn{
+    margin-right: 0.25rem;
+}
+@media (max-width: 640px) {
+  .loginpage-box{
+    flex-direction: column;
+  }
+}
