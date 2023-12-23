@@ -43,28 +43,8 @@ function App() {
 
   const [itemId,setItemid] = useState(1);
 
-  const [theme,setTheme] = useState(null);
-
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if(window.matchMedia("(prefers-color-scheme: dark)").matches){
-  //     setTheme("dark")
-  //   }else{
-  //     setTheme("light")
-  //   }
-  // },[])
-  // useEffect(() => {
-  //   if(theme === "dark"){
-  //     document.documentElement.classList.add("dark")
-  //   }else{
-  //     document.documentElement.classList.remove("dark")
-  //   }
-  // },[theme])
-  const handleTheme = () => {
-    console.log(theme)
-    setTheme(theme === "dark" ? "light" : "dark" )
-  }
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -75,7 +55,7 @@ function App() {
     });
 
     return () => {
-      // Unsubscribe when the component unmounts
+     
       unsubscribe();
     };
   }, []);
@@ -207,11 +187,11 @@ function App() {
         throw FirebaseError;
       }
       const response = await createUserWithEmailAndPassword(auth, emailSignUp, passwordSignUp);
+      console.log('Signup successful', response.user);
       navigate('/')
-      // setUser(null)
+      setUser(null)
       setEmailSignUp('');
       setPasswordSignUp('');
-      console.log('Signup successful', response.user);
     } catch (err) {
       console.log(err)
       alert("User Already Exists")
@@ -232,7 +212,7 @@ function App() {
     <div className='App px-2 flex flex-col my-5 mx-auto max-w-4xl w-2xl dark:bg-black dark:text-slate-100'>
       {user && (
         <>
-          <Nav handleLogout={handleLogout} handleTheme={handleTheme} />
+          <Nav handleLogout={handleLogout} />
           <Total total={total} />
         </>
       )}
