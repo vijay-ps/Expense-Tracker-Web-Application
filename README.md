@@ -21,4 +21,4 @@
 
 ## Demo
 
-Live Demo : https://65869c57818c42621328718b--unique-capybara-6f7529.netlify.app/
+Live Demo : https://6586d02e8c16a881cbdf4875--illustrious-hummingbird-131fc1.netlify.app/
