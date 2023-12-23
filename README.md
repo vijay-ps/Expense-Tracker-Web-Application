@@ -1,3 +1,41 @@
+# Expense Tracker App
+
+An expense tracker application built with React.js and Firebase.
+
+## Table of Contents
+
+- [Description](#description)
+- [Features](#features)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Firebase Configuration](#firebase-configuration)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Description
+
+This is a simple expense tracker application that allows users to track their expenses. It is built using React.js for the frontend and Firebase for the backend.
+
+## Features
+
+- Add, edit, and delete expenses
+- Categorize expenses
+- View expense history
+- Real-time data synchronization using Firebase
+
+## Demo
+
+[Live Demo](#) _(Add a link to your live demo if applicable)_
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/expense-tracker.git
+cd expense-tracker
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
